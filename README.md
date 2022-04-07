@@ -1,4 +1,11 @@
-# Psych Bot
+# Psych Bot 
+
+## Assignment 2 and 3 are AFTER Individual Project
+
+### Individual Project
+##  List of APIs
+ - Google Translate
+
 
 ### Navigation
 - [Project Setup](#project-setup)
