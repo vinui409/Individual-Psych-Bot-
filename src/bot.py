@@ -11,6 +11,10 @@ from nltk import pos_tag
 import os
 import sys
 
+
+
+
+
 cur_path=os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(0, cur_path+"/..")
 from src.fileReader import FileReader
@@ -97,6 +101,9 @@ class Bot:
 			self.current = nodeValue
 			return nodeValue
 
+
+
+
 		if answer.lower() == "quit":
 			return -1
 		
@@ -135,6 +142,14 @@ class Bot:
 					nodeValue = child 
 				if nodeValue == child:
 					break
+
+		
+			
+
+
+
+
+
 
 		self.current = nodeValue
 		return nodeValue

@@ -1,6 +1,8 @@
 import sys
 from tkinter import *
 from src.bot import Bot
+from googletrans import Translator
+translator = Translator()
 
 # Initialize Color & Font variables
 BG_GRAY = "#ABB2B9"
@@ -120,8 +122,16 @@ class GUI:
         else:
             # if no more nodes in dialogue or user printed "quit" - exit the program
             try:
-                response = self.bot.getResponse(msg)['text']
-            except:
+                detect = translator.detect(msg)
+                if detect.lang != 'en':
+                    translated = translator.translate(msg, dest="en").text
+                    response = self.bot.getResponse(translated)['text']
+                    response = translator.translate(response, dest=detect.lang).text
+                else:
+                    response = self.bot.getResponse(msg)['text']
+
+            except Exception as e:
+                print(str(e))
                 sys.exit()
 
             # renders user's message
