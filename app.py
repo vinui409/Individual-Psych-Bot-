@@ -122,10 +122,16 @@ class GUI:
         else:
             # if no more nodes in dialogue or user printed "quit" - exit the program
             try:
-                detect = translator.detect(msg)
-                if detect.lang != 'en':
+                # detects the language of the user input
+                detect = translator.detect(msg) 
+                #if the language is not enlgish 
+                if detect.lang != 'en':  
+                    #the user input is translated to enlish 
+                    #is stored in "translated"
+                    #so the bot can understand how to respond         
                     translated = translator.translate(msg, dest="en").text
                     response = self.bot.getResponse(translated)['text']
+                    #the bot's response gets translated back to the language that the user used
                     response = translator.translate(response, dest=detect.lang).text
                 else:
                     response = self.bot.getResponse(msg)['text']

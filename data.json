@@ -283,7 +283,8 @@
     {
       "id": "otherquestions",
       "children": ["otherquestionsrequest", "hardquestion", "seeyou"],
-      "text": "Do you have any other questions?"
+      "text": "DO you want to know more about medicine, sports or games that can help you?"
+      
     },
     {
       "id": "otherquestionsrequest",
