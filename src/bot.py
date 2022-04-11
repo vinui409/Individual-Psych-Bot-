@@ -102,8 +102,6 @@ class Bot:
 			return nodeValue
 
 
-
-
 		if answer.lower() == "quit":
 			return -1
 		
