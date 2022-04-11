@@ -1,4 +1,4 @@
-# Individual Psych Bot 
+# Individual Psych Bot - Vinu Ihalagamage 
 [CLICK HERE for the README of AS 1 and AS 2](Group.README.md)
 
 ##  List of APIs - Individual Project
