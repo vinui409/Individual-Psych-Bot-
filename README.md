@@ -11,5 +11,8 @@
    - The bot will show the description from wikipedia. 
 
 
+<img src="./docs/images/image.png" width="1000" height="300">
+
+
 
 
