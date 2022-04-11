@@ -8,6 +8,8 @@
    - As the psych-bot offeres psychologica advice, the user is able to ask about any medicine or other methods to help their situation
    - The bot will show the description from wikipedia. 
 
+[this text](../../READMEind.md)
+
 ### Navigation
 - [Project Setup](#project-setup)
 - [Project Description](#project-description)
