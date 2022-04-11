@@ -1,5 +1,6 @@
 # Individual Psych Bot - Vinu Ihalagamage 
-[CLICK HERE for the README of AS 1 and AS 2](Group.README.md)
+
+## [!!! CLick for Project Setup !!!](ProjectSetup.md)
 
 ##  List of APIs - Individual Project
 
@@ -18,6 +19,12 @@
 
 ## Presentation
 https://drive.google.com/file/d/1nEcofT4YLiiue-Ddux8V7BnnlcjXn-Gp/view?usp=sharing
+
+### Assignment 2 and 3
+
+[CLICK HERE for the README of AS 1 and AS 2](Group.README.md)
+
+
 
 
 
