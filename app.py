@@ -3,6 +3,7 @@ from tkinter import *
 from src.bot import Bot
 from googletrans import Translator
 translator = Translator()
+import wikipedia
 
 # Initialize Color & Font variables
 BG_GRAY = "#ABB2B9"
@@ -121,25 +122,32 @@ class GUI:
             self.renderMessage(self.bot.setUserName(msg))
         else:
             # if no more nodes in dialogue or user printed "quit" - exit the program
+
             try:
-                # detects the language of the user input
-                detect = translator.detect(msg) 
-                #if the language is not enlgish 
-                if detect.lang != 'en':  
-                    #the user input is translated to enlish 
-                    #is stored in "translated"
-                    #so the bot can understand how to respond         
-                    translated = translator.translate(msg, dest="en").text
-                    response = self.bot.getResponse(translated)['text']
-                    #the bot's response gets translated back to the language that the user used
-                    response = translator.translate(response, dest=detect.lang).text
+                #the user can ask about solutions and the bot will show the description 
+                #from wikipedia
+                if self.bot.current["id"] == "otherquestions":
+                    response = wikipedia.summary(msg, sentences=3)
                 else:
-                    response = self.bot.getResponse(msg)['text']
+                    #detects the language used by the user
+                    detect = translator.detect(msg)
+                    #if the language is not english
+                    if detect.lang != 'en':
+                        #the user input gets translated into english..
+                        #  then the bot's response is translated to the language
+                        #  used by the user
+                        translated = translator.translate(msg, dest="en").text
+                        response = self.bot.getResponse(translated)['text']
+                        response = translator.translate(response, dest=detect.lang).text
+                    else:
+                        response = self.bot.getResponse(msg)['text']
+
 
             except Exception as e:
                 print(str(e))
-                sys.exit()
+                sys.exit() 
 
+        
             # renders user's message
             msg1 = f"> {self.bot.getUserName()}: {msg}\n\n"
             self.renderMessage(msg1)
@@ -161,4 +169,4 @@ class GUI:
 
 if __name__ == "__main__":
     app = GUI()
-    app.run()
+    app.run() 

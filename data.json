@@ -190,7 +190,8 @@
     {
       "id": "nonprescribed",
       "children": ["nonprescribedyes", "nonprescribedno"],
-      "text": "Have you been taking any non-prescribed drugs?"
+      "text": "Have you been taking any non-prescribed drugs?",
+      "print": true
     },
     {
       "id": "nonprescribedyes",
@@ -282,24 +283,8 @@
     },
     {
       "id": "otherquestions",
-      "children": ["otherquestionsrequest", "hardquestion", "seeyou"],
-      "text": "DO you want to know more about medicine, sports or games that can help you?"
-      
-    },
-    {
-      "id": "otherquestionsrequest",
-      "children": [null],
-      "pos": ["VB", "WP", "WRB", "WDT"],
-      "condition": "therapy_words",
-      "text": "Hmmm, It seems like we are running out of scheduled time. I would recommend you to call our hotline.",
-      "print": true
-    },
-    {
-      "id": "hardquestion",
-      "children": [null],
-      "pos": ["VB", "WP", "WRB", "WDT"],
-      "text": "I would recommend you to call our hotline as it's hard to do it here.",
-      "print": true
+      "children": ["seeyou"],
+      "text": "Do you want to know more about medicine, sports or games that can help you?"
     },
     {
       "id": "seeyou",
