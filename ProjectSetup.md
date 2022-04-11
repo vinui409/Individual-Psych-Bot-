@@ -7,7 +7,6 @@ After cloning the repository to your computer, follow these steps to launch the 
 **Step 1:** Open the repository in your IDE ([Visual Studio Code](https://visualstudio.microsoft.com/vs/) is recommended).  
 &nbsp;  
 ### **For Windows**  
-&nbsp;
 
 **Step 2:** Open your Powershell command line tool.
 
