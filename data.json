@@ -191,7 +191,7 @@
       "id": "nonprescribed",
       "children": ["nonprescribedyes", "nonprescribedno"],
       "text": "Have you been taking any non-prescribed drugs?",
-      "print": true
+      
     },
     {
       "id": "nonprescribedyes",
